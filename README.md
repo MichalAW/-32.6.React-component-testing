@@ -1,3 +1,4 @@
-# 32.5.Write-code-and-test
- Create a function that will calculate the complete jumper's note, and write tests.
+
+# 32.6.React-component-testing
+Application development from 32.5
 
