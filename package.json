@@ -1,37 +1,47 @@
 {
-  "name": "32.6.React-component-testing",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.html",
-  "scripts": {
-    "test": "mocha index.test.js",
-    "test:watch": "onchange \"./*.js\" -- npm test"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/MichalAW/32.6.React-component-testing.git"
-  },
-  "keywords": [],
-  "author": "MichalAW michal.wanta@gmail.com",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/MichalAW/32.6.React-component-testing/issues"
-  },
-  "homepage": "https://github.com/MichalAW/32.6.React-component-testingt#readme",
-  "devDependencies": {
-    "mocha": "^6.2.0",
-    "onchange": "^6.0.0",
-    "react-scripts": "^3.0.1",
-    "redux-devtools": "^3.5.0",
-    "redux-devtools-dock-monitor": "^1.1.3",
-    "redux-devtools-log-monitor": "^1.4.0"
-  },
-  "dependencies": {
-    "bootstrap": "^3.3.6",
-    "react": "^15.4.2",
-    "react-dom": "^15.4.2",
-    "react-redux": "^5.1.0",
-    "react-router": "^3.0.5",
-    "redux": "^4.0.3"
-  }
+	"name": "32.6.React-component-testing",
+	"version": "0.1.0",
+	"private": true,
+	"dependencies": {
+		"react": "^16.8.6",
+		"react-dom": "^16.8.6",
+		"react-scripts": "3.0.1"
+	},
+	 "repository": {
+		 "type": "git",
+		 "url": "https://github.com/MichalAW/32.6.React-component-testing.git"
+	 },
+	"keywords": [],
+	"author": "MichalAW michal.wanta@gmail.com",
+	"license": "ISC",
+	"bugs": {
+		 "url": "https://github.com/MichalAW/32.6.React-component-testing/issues"
+	 },
+	"homepage": "https://github.com/MichalAW/32.6.React-component-testingt#readme",
+	"scripts": {
+		"start": "react-scripts start",
+		"build": "react-scripts build",
+		"test": "react-scripts test",
+		"eject": "react-scripts eject"
+	},
+	"eslintConfig": {
+		"extends": "react-app"
+	},
+	"browserslist": {
+		"production": [
+			">0.2%",
+			"not dead",
+			"not op_mini all"
+		],
+		"development": [
+			"last 1 chrome version",
+			"last 1 firefox version",
+			"last 1 safari version"
+		]
+	},
+	"devDependencies": {
+		"enzyme": "^3.10.0",
+		"enzyme-adapter-react-16": "^1.14.0",
+		"react-test-renderer": "^16.8.6"
+	}
 }

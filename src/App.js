@@ -1,39 +1,16 @@
 import React, { Component } from 'react';
 import './App.css';
 import PlayersList from './components/PlayersList/PlayersList';
-import Player from './components/Player/Player';
 import AddPlayer from './components/AddPlayer/AddPlayer';
+
 
 class App extends Component {
 	constructor() {
 		super();
 
 		this.state = {
-			players: [
-				{
-					name: 'Kunegunda',
-					score: 5,
-				},
-				{
-					name: 'Antoś',
-					score: 0,
-				}
-			]
+			players: []
 		}
-	}
-
-	onScoreUpdate = (playerIndex, scoreChange) => {
-		this.setState({
-			players: this.state.players.map((player, index) => {
-				if (index === playerIndex) {
-					return {
-						...player,
-						score: player.score + scoreChange
-					};
-				}
-				return player;
-			})
-		})
 	}
 
 	onPlayerAdd = (playerName) => {
@@ -45,13 +22,29 @@ class App extends Component {
 			players: [...this.state.players, newPlayer]
 		})
 	}
-	
- 	render() {
+
+	onScoreUpdate = (playerIndex, scoreChange) => {
+		this.setState({
+			players: this.state.players.map((player, index) => {
+				if (index === playerIndex) {
+					return { ...player, score: player.score + scoreChange };
+				}
+				return player;
+			})
+		})
+	}
+
+	onPlayerRemove = playerIndex => {
+		const newPlayers = this.state.players.filter((item,index) => index !== playerIndex);
+		this.setState({players: newPlayers});
+	}
+
+
+	render() {
 		return (
 			<div className="App">
-				<PlayersList players={this.state.players} onScoreUpdate={this.onScoreUpdate}/>
 				<AddPlayer onPlayerAdd={this.onPlayerAdd} />
-				<Player player={this.player} />
+				<PlayersList players={this.state.players} onScoreUpdate={this.onScoreUpdate} onPlayerRemove={this.onPlayerRemove}/>
 			</div>
 		);
 	}
