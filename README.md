@@ -1,6 +1,8 @@
 # Description 
 
 It's a scorekeeper app for testing based on React.
+This is my first software testing.
+Code represents configuring the test of environment and write unit tests.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
