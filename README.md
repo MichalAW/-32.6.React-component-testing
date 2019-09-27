@@ -1,3 +1,5 @@
+32.6.React Component testing by mocha tool. 
+This project is for practices, like test react applications
 # Description 
 
 It's a scorekeeper app for testing based on React.
